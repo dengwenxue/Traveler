@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.mark.traveller.ftwy.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:fitsSystemWindows="true"
+            android:background="@color/white"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <com.youth.banner.Banner
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="top"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleMarginTop="15dp"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/fragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="64dp"
+        android:layout_marginLeft="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:fabSize="normal"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_behavior="com.mark.traveller.ftwy.widget.FabBehavior"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:background="@color/white_transparent"
+        android:orientation="horizontal"
+        app:layout_behavior="com.mark.traveller.ftwy.widget.FabBehavior">
+
+        <RadioButton
+            android:id="@+id/bottom_home"
+            style="@style/tab_bottom_radiobutton"
+            android:drawableTop="@drawable/ic_tab_home"
+            android:text="首页">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/bottom_recreation"
+            style="@style/tab_bottom_radiobutton"
+            android:drawableTop="@drawable/ic_tab_recreation"
+            android:text="娱乐">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/bottom_search"
+            style="@style/tab_bottom_radiobutton"
+            android:drawableTop="@drawable/ic_tab_search"
+            android:text="定位">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/bottom_profile"
+            style="@style/tab_bottom_radiobutton"
+            android:drawableTop="@drawable/ic_tab_profile"
+            android:text="个人">
+        </RadioButton>
+    </RadioGroup>
+
+</android.support.design.widget.CoordinatorLayout>

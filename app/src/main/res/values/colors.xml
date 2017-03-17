@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 主要颜色 -->
+    <color name="colorMain">#00C0FF</color>
+    <color name="colorMainDark">#303F9F</color>
+    <color name="bg">#21282C</color>
+
+    <!-- 字体颜色 -->
+    <color name="textColor">#FFFFFF</color>
+
+    <!--项目中需要的颜色-->
+    <color name="white">#ffffffff</color>
+    <color name="base_textcolor">#9C9E9C</color>
+    <color name="gray">#dddddd</color>
+    <color name="white_transparent">#99ffffff</color>
+    <color name="base_color">#087dde</color>
+
+    <color name="app_primary">#1976D2</color>
+    <color name="app_primary_pressed">#1565C0</color>
+    <color name="app_ripple">#ff4081</color>
+
+    <color name="tab_text_color_selected">#00C0FF</color> <!-- 选中文字颜色 -->
+    <color name="tab_text_color_normal">#ff737373</color> <!-- 未选中文字颜色 -->
+</resources>

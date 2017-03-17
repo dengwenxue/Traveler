@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_recreation_refresh"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fragment_recreation_video"
+            android:layout_width="match_parent"
+            android:layout_height="256dp">
+
+            <io.vov.vitamio.widget.CenterLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <io.vov.vitamio.widget.VideoView
+                    android:id="@+id/fragment_recreation_videoview"
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+            </io.vov.vitamio.widget.CenterLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/probar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dip">
+
+                    <TextView
+                        android:id="@+id/download_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="40dip"
+                        android:padding="5dip"/>
+
+                    <TextView
+                        android:id="@+id/load_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/download_rate"
+                        android:minWidth="40dip"
+                        android:padding="5dip"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_recreation_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/fragment_recreation_video"/>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>
